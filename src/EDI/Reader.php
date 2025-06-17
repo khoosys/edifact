@@ -466,14 +466,20 @@ class Reader
             if ($position == 'group_is' && $edi_row[0] == $end) {
                 $position = 'group_finish';
                 $group[] = $edi_row;
-                $groups[] = $group;
-                $group = [];
 
+                continue;
+            }
+
+            // found end of group
+            if ($position == 'group_finish' && $edi_row[0] == $end) {
+                $group[] = $edi_row;
                 continue;
             }
 
             // next group start
             if ($position == 'group_finish' && $edi_row[0] == $start) {
+                $groups[] = $group;
+                $group = [];
                 $group[] = $edi_row;
                 $position = 'group_is';
 
@@ -482,6 +488,7 @@ class Reader
 
             // finish
             if ($position == 'group_finish' && $edi_row[0] == $after) {
+                $groups[] = $group;
                 break;
             }
 
