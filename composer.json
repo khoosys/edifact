@@ -1,5 +1,5 @@
 {
-    "name": "sabas/edifact",
+    "name": "khoosys/edifact",
     "description": "Tools in PHP for UN/EDIFACT",
     "keywords": [
         "EDI",
@@ -7,7 +7,7 @@
         "message",
         "container"
     ],
-    "homepage": "https://github.com/php-edifact/edifact",
+    "homepage": "https://github.com/khoosys/edifact",
     "license": "LGPL-3.0-or-later",
     "authors": [
         {
@@ -44,10 +44,10 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/php-edifact/edifact"
+            "url": "https://github.com/khoosys/edifact"
         }
     ],
     "support": {
-        "issues": "https://github.com/php-edifact/edifact/issues"
+        "issues": "https://github.com/khoosys/edifact/issues"
     }
 }
